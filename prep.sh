@@ -1,0 +1,2 @@
+terraform init
+terraform import fortiflexvm_config.demo 1490
