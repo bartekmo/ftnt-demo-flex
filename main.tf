@@ -28,8 +28,11 @@ resource "fortiflexvm_entitlements_vm" "demo" {
   config_id     = fortiflexvm_config.demo.config_id
   description   = "Web demo license"
   end_date      = "2024-11-30"
-  #status = "ACTIVE"
+  /*
+  ## Use the lines below to reuse existing licenses during your dry runs and avoid having too many serials
+  status = "ACTIVE"
   serial_number = count.index == 0 ? "FGVMELTM24012282" : "FGVMELTM24012283"
+  */
 }
 
 module "fgt_ha" {
